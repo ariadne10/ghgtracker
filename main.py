@@ -10,6 +10,7 @@ stationary = input("Type: ")
 #### What metric?
 metric = st.selectbox('How would you like to be contacted?', ('Hour','Day','Week','Month',
                                                               'Year'))
+metric
 ##### What is the time period
 # Add new
 
