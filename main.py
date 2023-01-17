@@ -2,41 +2,35 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-################ Define Scope 1 Emissions (Indirect) ################
 
-## Stationary Combustion
-### What type of Stationary Combustion?
-def stationary():
-    emission_type = st.selectbox('Type', ('Boiler','Furnace','Turbine','Heater','Incinerator','Engine','Flare'))
-    metric = st.selectbox('Period of time', ('Hour','Day','Week','Month','Year'))
-    time = st.selectbox('Period of time', ('kWa','kg','Week','Month','Year'))
+# Create a function that returns the options for the second dropdown based on the selected value of the first dropdown
+@st.cache
+def get_options_2(value):
+    if value == 'Option 1':
+        return ['Option 2.1', 'Option 2.2', 'Option 2.3']
+    elif value == 'Option 2':
+        return ['Option 2.4', 'Option 2.5', 'Option 2.6']
+    else:
+        return []
 
-stationary()
+# Create a function that returns the options for the third dropdown based on the selected value of the second dropdown
+@st.cache
+def get_options_3(value):
+    if value == 'Option 2.1':
+        return ['Option 3.1', 'Option 3.2']
+    elif value == 'Option 2.2':
+        return ['Option 3.3', 'Option 3.4']
+    else:
+        return []
 
-##### What is the time period
-# Add new
+# Create the first dropdown
+options_1 = ['Option 1', 'Option 2']
+value_1 = st.selectbox('Select an option', options_1)
 
-## Stationary Combustion
-### Type
-#### Metric
-##### Time period
-# Add new
+# Create the second dropdown
+options_2 = get_options_2(value_1)
+value_2 = st.selectbox('Select an option', options_2)
 
-## Stationary Combustion
-### Type
-#### Metric
-##### Time period
-# Add new
-
-## Stationary Combustion
-### Type
-#### Metric
-##### Time period
-# Add new
-
-################ Define Scope 2 Emissions (Direct) ################
-
-
-
-
-################ Define Scope 3 Emissions (Indirect) ################
+# Create the third dropdown
+options_3 = get_options_3(value_2)
+value_3 = st.selectbox('Select an option', options_3)
