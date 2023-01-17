@@ -26,16 +26,19 @@ value_3 = st.selectbox('Select an option', options_3)
 
 if value_3:
     st.subheader("Please fill in the form according to the scope selected")
-    with st.form():
-        if value_3 == 'Scope 1':
-            st.text("Scope 1 form")
+    if value_3 == 'Scope 1':
+        st.text("Scope 1 form")
+        with st.form():
             input_1 = st.text_input("Input 1")
             input_2 = st.text_input("Input 2")
-        elif value_3 == 'Scope 2':
-            st.text("Scope 2 form")
+    elif value_3 == 'Scope 2':
+        st.text("Scope 2 form")
+        with st.form():
             input_3 = st.text_input("Input 3")
             input_4 = st.text_input("Input 4")
-        else:
-            st.text("Scope 3 form")
+    else:
+        st.text("Scope 3 form")
+        with st.form():
             input_5 = st.text_input("Input 5")
             input_6 = st.text_input("Input 6")
+
