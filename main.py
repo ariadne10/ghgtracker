@@ -6,10 +6,10 @@ import numpy as np
 # Create a function that returns the options for the second dropdown based on the selected value of the first dropdown
 @st.cache
 def get_options_2(value):
-    if value == 'Option 1':
-        return ['Option 2.1', 'Option 2.2', 'Option 2.3']
-    elif value == 'Option 2':
-        return ['Option 2.4', 'Option 2.5', 'Option 2.6']
+    if value == 'VBC Osage':
+        return ['FY20', 'FY21', 'FY22', 'FY23', 'FY24', 'FY25', 'FY26']
+    elif value == 'VBC Libertyville':
+        return ['FY20', 'FY21', 'FY22', 'FY23', 'FY24', 'FY25', 'FY26']
     else:
         return []
 
