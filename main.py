@@ -38,3 +38,9 @@ if value_3:
         st.text("Scope 3 form")
         input_5 = st.text_input("Input 5")
         input_6 = st.text_input("Input 6")
+
+if st.button("submit"):
+    st.success("Form Submitted Successfully")
+    # Perform some action with the input values
+    result = input_1 + input_2
+    st.write("Result is:", result)
