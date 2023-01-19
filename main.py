@@ -38,13 +38,3 @@ if value_3:
         st.text("Scope 3 form")
         input_5 = st.text_input("Input 5")
         input_6 = st.text_input("Input 6")
-
-        with st.form():
-            input_3 = st.text_input("Input 3")
-            input_4 = st.text_input("Input 4")
-    else:
-        st.text("Scope 3 form")
-        with st.form():
-            input_5 = st.text_input("Input 5")
-            input_6 = st.text_input("Input 6")
-
