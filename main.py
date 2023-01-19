@@ -24,7 +24,7 @@ value_2 = st.selectbox('Select an option', options_2)
 options_3 = get_options_3()
 value_3 = st.selectbox('Select an option', options_3)
 
-name = st.text_input("What is your name?")
+
 
 if value_3:
     st.subheader("Please fill in the form according to the scope selected")
@@ -32,8 +32,8 @@ if value_3:
         st.text("Scope 1 form")
         input_1 = st.text_input("Input 1")
         input_2 = st.text_input("Input 2")
-        st.write("Your name is", name)
-        st.text("Your name is " + name)
+        st.write("Your name is", input_1)
+        st.text("Your name is " + input_2)
     elif value_3 == 'Scope 2':
         st.text("Scope 2 form")
         input_3 = st.text_input("Input 3")
