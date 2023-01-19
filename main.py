@@ -44,3 +44,5 @@ if st.button("submit"):
     # Perform some action with the input values
     result = input_1 + input_2
     st.write("Result is:", result)
+    st.write("Your name is", name)
+    st.text("Your name is " + name)
