@@ -24,6 +24,7 @@ value_2 = st.selectbox('Select an option', options_2)
 options_3 = get_options_3()
 value_3 = st.selectbox('Select an option', options_3)
 
+
 if value_3:
     st.subheader("Please fill in the form according to the scope selected")
     if value_3 == 'Scope 1':
@@ -39,6 +40,7 @@ if value_3:
         input_5 = st.text_input("Input 5")
         input_6 = st.text_input("Input 6")
 
+name = st.text_input("What is your name?")
 if st.button("submit"):
     st.success("Form Submitted Successfully")
     # Perform some action with the input values
