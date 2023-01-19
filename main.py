@@ -31,16 +31,22 @@ if value_3:
         st.text("Scope 1 form")
         input_1 = st.text_input("Input 1")
         input_2 = st.text_input("Input 2")
+        st.write("Your name is", name)
+        st.text("Your name is " + name)
     elif value_3 == 'Scope 2':
         st.text("Scope 2 form")
         input_3 = st.text_input("Input 3")
         input_4 = st.text_input("Input 4")
+        st.write("Your name is", name)
+        st.text("Your name is " + name)
     else:
         st.text("Scope 3 form")
         input_5 = st.text_input("Input 5")
         input_6 = st.text_input("Input 6")
+        st.write("Your name is", name)
+        st.text("Your name is " + name)
 
-name = st.text_input("What is your name?")
+
 if st.button("submit"):
     st.success("Form Submitted Successfully")
     # Perform some action with the input values
