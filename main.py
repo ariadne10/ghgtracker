@@ -25,6 +25,7 @@ options_3 = get_options_3()
 value_3 = st.selectbox('Select an option', options_3)
 
 
+name = st.text_input("What is your name?", key='name')
 
 if value_3:
     st.subheader("Please fill in the form according to the scope selected")
